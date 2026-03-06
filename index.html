@@ -69,6 +69,7 @@ nav.scrolled { background: rgba(244,237,228,0.95); box-shadow: 0 1px 8px rgba(26
   padding: 140px 56px 80px; text-align: center;
   position: relative; overflow: hidden;
 }
+.hero > * { width: 100%; }
 .hero::before {
   content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%);
   width: 800px; height: 800px;
@@ -95,13 +96,13 @@ nav.scrolled { background: rgba(244,237,228,0.95); box-shadow: 0 1px 8px rgba(26
   animation: fadeUp 0.8s ease 0.3s both;
 }
 .hero-cta {
-  display: inline-flex; align-items: center; gap: 10px;
+  display: flex; align-items: center; justify-content: center; gap: 10px;
   padding: 16px 40px; background: var(--text); color: var(--bg);
   border: none; font-family: var(--sans);
-  font-size: 0.88rem; font-weight: 700;
+  font-size: 0.88rem; font-weight: 700; width: fit-content;
   border-radius: 50px; transition: all 0.3s; cursor: pointer;
   animation: fadeUp 0.8s ease 0.45s both;
-  align-self: center; margin: 0 auto;
+  margin: 0 auto;
 }
 .hero-cta:hover { background: var(--yellow); color: #fff; transform: translateY(-2px); box-shadow: 0 6px 30px rgba(200,150,46,0.25); }
 .hero-scroll {
@@ -775,11 +776,11 @@ footer .copyright { font-size: 0.7rem; color: var(--text-muted); }
   </div>
   <h1>A better way to <em>advertise</em> your business.</h1>
   <p class="hero-desc">I'm Anthony Marinelli &mdash; a freelance media buyer and Google Ads manager helping small businesses turn clicks into real customers.</p>
+
   <button class="hero-cta" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">
     View My Work
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
   </button>
-  <a href="#services" class="hero-scroll">Scroll to learn more</a>
 </section>
 
 <!-- STATEMENT -->
